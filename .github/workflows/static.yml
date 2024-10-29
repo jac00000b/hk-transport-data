@@ -42,6 +42,12 @@ jobs:
           repository: "hkbus/hk-bus-crawling"
           path: "data"
           ref: "gh-pages"
+      - name: Checkout Waypoints
+        uses: actions/checkout@v4
+        with:
+          repository: "hkbus/route-waypoints"
+          path: "data/waypoints"
+          ref: "gh-pages"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
